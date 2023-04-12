@@ -1,21 +1,28 @@
-# Graded-unit-dockerfile
-docker stuff for graded unit
-reate the following directory 
- - /var/www/site
 
- cd into /var/www/site
+Graded-unit-dockerfile
+This repository contains the Dockerfile and Docker Compose configuration files to set up a development environment for the Graded Unit project.
 
- git clone <git url>
+Installation
+To install and run this project on your local machine, you will need to have Docker and Docker Compose installed.
 
- cp -r GradedUnit1 .
+clone git repo https://github.com/ScoRoss/Graded-unit-dockerfile.git
+modify the docker-compose yml volumes, for your file system
 
- cd Docker
+i.e
 
- Docker-compose build
- docker-compose up
+volumes /var/www/site
 
- log into phpadmin
+docker-compose build
+docker-compose up
 
- import database
+log into phpadmin, load database 
 
- go to localhost/ - dumfriesGamers
+go to localhost/
+
+Usage
+Once the containers are running, you can access the application by visiting http://localhost:8000 in your web browser. The default username and password for the application are admin and password, respectively.
+
+To stop the containers, run docker-compose down.
+
+Troubleshooting
+If you encounter any issues with the installation or usage of this project, please refer to the official Docker and Docker Compose documentation or open an issue on this repository.
